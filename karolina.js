@@ -1,10 +1,11 @@
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const userForm = document.querySelector('.userinfo form');
     const quizSection = document.querySelector('.quiz');
     const successMessage = document.getElementById('success');
-    const submitBtn = document.querySelector('.quiz input[type="submit"]');
+    const submitButton = document.querySelector('.quiz input[type="submit"]');
     const userInfoSection = document.querySelector('.userinfo'); 
     const infoFillInMessage = document.getElementById('infofillin'); 
     const qerrorMessage = document.getElementById('qerror'); 
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } 
     });
 
-    submitBtn.addEventListener('click', function(event) {
+    submitButton.addEventListener('click', function(event) {
         event.preventDefault(); 
 
         const firstName = document.getElementById('firstName').value.trim();
@@ -139,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
             successMessage.style.display = 'block';
             totalscore.style.display = 'block';
             document.getElementById('totalscore').textContent = `Your score: ${score} / 7`;
-            submitBtn.disabled = true;
+            submitButton.disabled = true;
             qerrorMessage.style.display = 'none';
         }
         else{
