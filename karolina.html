@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Drink Recipes</title>
+
+    <link rel="icon" href="images/lemon.png" type="image/png" alt="lemon icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Quiz</h1>
+        <h2>Drink Recipes</h2>
+    </header>
+
+    <main>
+    <!--User Information-->
+        <div class="userinfo">
+            <h2>Your Information</h2>
+                <div id="infofillin" class="hidden">Please provide your contact information before you submit the quiz.</div>
+                
+                <div id="invalidfname" class="hidden">Only letters are allowed for first name.</div>
+                <div id="invalidlname" class="hidden">Only letters are allowed for last name.</div>
+                <div id="invalidmail" class="hidden">Provid a valid email format.</div>
+
+            <form>
+            <div class="userfill">
+                <label for="firstName">First name:<span class="required-star">*</span></label> <br>
+                <input type="text" id="firstName" required/>
+            </div>
+
+            <div class="userfill">
+                <label for="lastName">Last name:<span class="required-star">*</span></label> <br>
+                <input type="text" id="lastName" required />
+            </div>
+
+            <div class="userfill">
+                <label for="email">Email:<span class="required-star">*</span></label> <br>
+                <input type="email" id="email" required/>
+            </div>
+
+            <div class="userfill"> <!--Vara samma klass?-->
+               <input type="submit" value="Continue"/>
+            </div>
+            </form>
+        </div>
+
+
+    <!--Quiz-->
+        <div class="quiz">
+        <h2>Quiz Questions</h2>
+        <form>
+
+        <!--Fixa med for, name, value, etc-->
+
+        <div class="question">
+            <label for="q1">Q1: To mix a <i>Moscow Mule</i>, what do you need more than lime juice, ginger ale and ice?
+                <span class="required-star">*</span></label> <br>
+            <input type="text" name="q1" required>
+        <span id="errorq1" class="hidden">Please answer question 1</span>
+        </div>
+
+            <br>
+
+        <div class="question">
+            <label for="q2">Q2: Which of these drinks are traditionally <i>gin</i> based?</label> <br>
+            <input type="checkbox" name="q2[]" value="Espresso Martini" required> Espresso Martini <br>
+            <input type="checkbox" name="q2[]" value="French 75" required> French 75 <br>
+            <input type="checkbox" name="q2[]" value="Mojito" required> Mojito <br>
+            <input type="checkbox" name="q2[]" value="Gimlet" required> Gimlet <br>
+        </div>
+
+            <br>
+
+        <div class="question">
+            <label for="q3">Q3: What is a mocktail?</label> <br>
+            <input type="radio" name="q3" value="3a"> A non alcoholic cocktail. <br>
+            <input type="radio" name="q3" value="3b"> A cocktail with three or less ingredients. <br>
+            <input type="radio" name="q3" value="3c"> A cocktail without any ice. <br>
+            <input type="radio" name="q3" value="3d"> A cocktail served without a garnish. <br>
+        </div>
+
+            <br>
+
+        <div class="question"> 
+            <label for="q4">Q4: What are the ingredients in a <i>Tom Collins</i>?
+                <span class="required-star">*</span></label> <br>
+            <input type="radio" name="q4" value="4a" required> Tequila, lime juice, simple syrup and passionfruit juice. <br>
+            <input type="radio" name="q4" value="4b" required> Vodka, lemon juice, simple syrup and sparkling wine. <br>
+            <input type="radio" name="q4" value="4c" required> Gin, lemon juice, simple syrup and soda water. <br>
+            <input type="radio" name="q4" value="4d" required> Rum, lime juice, simple syrup and sprite. <br>
+        <span id="errorq4" class="hidden">Please answer question 4</span>
+        </div>
+    
+            <br>
+
+        <div class="question">
+            <label for="q5">Q5: What are some of the ingredients in a classic <i>Bloody Mary?</i></label> <br>
+            <input type="checkbox" name="q5[]" value="Vodka"> Vodka <br>
+            <input type="checkbox" name="q5[]" value="Soda Water"> Soda Water <br>
+            <input type="checkbox" name="q5[]" value="Tomato Juice"> Tomato Juice <br>
+            <input type="checkbox" name="q5[]" value="Worcestershire Sauce"> Worcestershire Sauce <br>
+        </div>
+        
+        <br>
+
+        <div class="question">
+            <label for="q6">Q6: Which fruit is associated with <i>piña-coladas?</i></label> <br>
+            <select name="q6">
+                <option selected disabled>Pick an option</option>
+                <option value="Grapefruit">Grapefruit</option>
+                <option value="Peach">Peach</option>
+                <option value="Mango">Mango</option>
+                <option value="Pineapple">Pineapple</option>
+            </select>
+        </div>
+
+            <br>
+
+        <div class="question">
+            <label for="q7">Q7: What alcoholic drink is typically made with tequila and served in a salt-rimmed glass?
+            </label> <br>
+            <input type="text" name="q7" value=""> 
+        </div>
+
+            <br>
+
+            <input type="submit" value="Submit" id=""/>
+
+        </form>
+    </div>
+
+    <div id="success" class="hidden">Thank you! Your information and answers has successfully been submitted!</div>
+    <div id="totalscore">"score"</div>
+
+    <div id="qerror" class="hidden">Make sure all required questions have been answered.</div>
+
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="karolina.js"></script>
+
+</body>
+</html>
