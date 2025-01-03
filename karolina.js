@@ -87,13 +87,21 @@ document.addEventListener('DOMContentLoaded', function() {
             score++;
         }
 
-        // Q2  
+
         const q2Answers1 = document.querySelector('input[name="q2[]"][value="French 75"]');
         const q2Answers2 = document.querySelector('input[name="q2[]"][value="Gimlet"]');
         const q2Answers3 = document.querySelector('input[name="q2[]"][value="Espresso Martini"]');
         const q2Answers4 = document.querySelector('input[name="q2[]"][value="Mojito"]');
         if (q2Answers1.checked && q2Answers2.checked && !q2Answers3.checked && !q2Answers4.checked) {
                 score++;
+        }
+
+        if (q2Answers1.checked || q2Answers2.checked || q2Answers3.checked || q2Answers4.checked) {
+            errorq2.style.display = 'none';
+        }
+        else{
+            isQuizValid = false;
+            errorq2.style.display = 'block';
         }
 
         // Q3 

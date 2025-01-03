@@ -109,6 +109,7 @@ input[type="submit"]:focus {
 #invalidmail,
 #qerror,
 #errorq1,
+#errorq2,
 #errorq4{
     margin: 10px;
     font-weight: bold;
